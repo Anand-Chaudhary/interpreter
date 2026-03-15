@@ -21,6 +21,7 @@ const (
 	SUBTRACT = "-"
 	MULTIPLY = "*"
 	DIVIDE   = "/"
+	NOT = "!"
 
 	LT = "<"
 	GT = ">"
@@ -50,6 +51,11 @@ const (
 var keywords = map[string]TokenType{
 	"fn":  FUNCTION,
 	"let": LET,
+	"true": TRUE,
+	"false": FALSE,
+	"return": RETURN,
+	"if": IF,
+	"else": ELSE,
 }
 
 func LookupIdent(ident string) TokenType {
