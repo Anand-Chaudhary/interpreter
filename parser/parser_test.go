@@ -10,7 +10,7 @@ import (
 func TestLetStatements(t *testing.T) {
 	input := `
 		let x = 5;
-		ley y = 10;
+		let y = 10;
 		let foobar = 8383838;
 	`
 
@@ -43,7 +43,7 @@ func TestLetStatements(t *testing.T) {
 	}
 }
 
-func testLetStatement(t *testing.T, s ast.Statement, name string ) bool {
+func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 	if s.TokenLiteral() != "let" {
 		t.Errorf("s.TokenLiteral not 'let'. got=%q", s.TokenLiteral())
 		return false
